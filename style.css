@@ -369,7 +369,33 @@
    font-size: 1.6rem;
    margin: .3rem 0 1rem;
 }
+@media (max-width: 1024px) {
+    .home-img {
+        top: 100px;
+        left: 60px;
+        width: 80%; /* Adjust the image size */
+    }
+}
 
+/* For mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+    .home-img {
+        top: 80px;
+        left: 40px;
+        width: 70%; /* Reduce size for smaller screens */
+    }
+}
+
+/* For very small screens (below 480px) */
+@media (max-width: 480px) {
+    .home-img {
+        position: relative; /* Change to relative for better alignment */
+        top: 0;
+        left: 0;
+        width: 100%; /* Make it responsive */
+        text-align: center;
+    }
+}
 .portfolio-layer a{
    display: inline-flex;
    justify-content: center;
