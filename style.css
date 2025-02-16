@@ -388,8 +388,7 @@
 
 /* For very small screens (below 480px) */
 @media (max-width: 480px) {
-    .home-img {
-        position: relative; /* Change to relative for better alignment */
+    .home-img { /* Change to relative for better alignment */
         top: 0;
         left: 0;
         width: 100%; /* Make it responsive */
@@ -590,7 +589,7 @@
    font-size: 2rem;
  }
   .box-container .box:hover .content{
-   top: 25%;
+   top: 75%;
  }
   .desc {
    margin: 2rem;
