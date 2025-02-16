@@ -415,14 +415,6 @@
    padding: 2rem 9%;
    background: var(--second-bg-color);
 }
-:root {
-    --bg-color: rgba(255, 255, 255, 0.1);
-    --second-bg-color: #4f6794;
-    --text-color: #fff;
-    --main-color: #0ef;
-}
-
-
 
 .footer-text p{
    font-size: 1.6rem;
@@ -761,11 +753,12 @@
    }
 }
 .buttons {
-   margin-bottom: 20px;
-   display: flex;
-   justify-content: center;  
-   align-items: center;  
-   flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .buttons button {
@@ -778,6 +771,7 @@
    border-radius: 5px;
    font-size: 1rem;
    transition: background-color 0.3s, transform 0.2s;
+    white-space: nowrap;
 }
 
 /* Hover effect */
@@ -787,12 +781,13 @@
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
    .buttons {
-      flex-direction: column; /* Stack buttons vertically */
+      flex-direction: row;
+        justify-content: center; /* Stack buttons vertically */
    }
    .buttons button {
-      width: 40%; /* Makes buttons more touch-friendly */
+       flex: 1 1 auto;
       font-size: 1.1rem; /* Slightly larger font for readability */
       padding: 12px;
    }
