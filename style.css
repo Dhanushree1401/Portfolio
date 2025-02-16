@@ -737,7 +737,8 @@
    margin-bottom: 20px;
    display: flex;
    justify-content: center;  
-   align-items: center;  
+   align-items: center; 
+    flex-wrap: wrap;
 }
 .buttons button {
    padding: 10px 20px;
@@ -751,6 +752,16 @@
 }
 .buttons button:hover {
    background-color:var(--text-color);
+}
+@media screen and (max-width: 480px) {
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    .buttons button {
+        width: 80%; /* Make buttons wider */
+        padding: 12px;
+        font-size: 14px;
+    }
 }
 
 #msg{
