@@ -171,10 +171,10 @@
 
  @keyframes zoomIn {
    0% {
-       transform: scale(1); /* Normal size */
+       transform: scale(0.1); /* Normal size */
    }
    100% {
-       transform: scale(1.4); /* Slightly larger */
+       transform: scale(0.5); /* Slightly larger */
    }
 }
 .home-img {
@@ -313,7 +313,6 @@
 .portfolio-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px,2fr));
- 
    margin-bottom: 0;
    gap: 1.2rem;
 }
@@ -784,10 +783,10 @@
 @media (max-width: 600px) {
    .buttons {
       flex-direction: row;
-        justify-content: center; /* Stack buttons vertically */
+       /* justify-content: center; /* Stack buttons vertically */
    }
    .buttons button {
-       flex: 1 1 auto;
+       /*flex: 1 1 auto;
       font-size: 1.1rem; /* Slightly larger font for readability */
       padding: 12px;
    }
@@ -795,15 +794,8 @@
 
 @media (max-width: 480px) {
    .buttons button {
-      width: 40%; /* Full width on small screens */
       font-size: 1.2rem; /* Even larger for better usability */
       padding: 14px;
    }
 }
 
-
-#msg{
-   color: #61b752;
-   margin-top: -10px;
-   display: block;
-}
