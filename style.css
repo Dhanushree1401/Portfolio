@@ -735,10 +735,8 @@
 }
 .buttons {
    margin-bottom: 20px;
-   display: flex;
    justify-content: center;  
    align-items: center; 
-    flex-wrap: wrap;
 }
 .buttons button {
    padding: 10px 20px;
