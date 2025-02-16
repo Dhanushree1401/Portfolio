@@ -173,14 +173,14 @@
    0% {
        transform: scale(1); /* Normal size */
    }
-   50% {
+   30% {
        transform: scale(1.1); /* Slightly larger */
    }
 }
 .home-img {
    position: absolute; /* Change to absolute positioning */
-   top: 130px; /* Distance from the top of the parent section */
-   left: 80px; /* Distance from the right of the parent section */
+   top: 160px; /* Distance from the top of the parent section */
+   left: 100px; /* Distance from the right of the parent section */
 }
  .home-content h3 {
     font-size: 3.2rem;
