@@ -24,7 +24,9 @@
                 <a href="#about">ABOUT</a>
                 <a href="#services">SKILLS</a>
                 <a href="#education">EDUCATION</a>
-                <a href="#portfolio">PROJECT</a>
+                <a href="#leadership">LEADERSHIP</a>
+                <a href="#achievement">ACHIEVEMENTS</a>
+                <a href="#portfolio">PROJECTS</a>
             </nav>
         </header>
         <section class="home" id="home">
@@ -167,9 +169,17 @@
           
         <section class="portfolio"id="portfolio">
             <h1 class="heading"><i class="fas fa-folder-open"></i> Latest<span>Project</span></h1>
+            <div class="buttons">
+                <button onclick="filterProjects('ALL')">All</button>
+                <button onclick="filterProjects('DESIGN')">DESIGN</button>
+                <button onclick="filterProjects('FULL STACK')">FULL STACK</button>
+                <button onclick="filterProjects('UI/UX')">UI/UX</button>
+                <button onclick="filterProjects('IOT')">IOT</button>
+                <button onclick="filterProjects('FRONTEND')">FRONTEND</button>
+                <button onclick="filterProjects('PYTHON')">PYTHON</button>
+            </div>
             <div class="portfolio-container">
-               
-                <div class="portfolio-box">
+                <div class="portfolio-box" data-category="DESIGN">
                     <img src="Images/AR.jpg"alt="">
                     <div class="portfolio-layer">
                         <h4>AR application for Education</h4>
@@ -179,7 +189,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/virtualzoo.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>Virtual Zoo</h4>
                         <p>The Virtual Zoo, built with Unreal Engine, offers an immersive AR/VR experience, letting users explore lifelike 3D animals and habitats. 
                             Designed for education and entertainment, it features interactive models, animations, and realistic soundscapes for an engaging learning journey. 🚀🐾 </p>
@@ -188,7 +198,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/MATHGame.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>MATHGAME</h4>
                         <p>The Math Game is an interactive learning app developed in Unity, designed to enhance mathematical skills through engaging gameplay. 
                             It features dynamic quizzes, multiple difficulty levels, a timer-based challenge, and real-time scoring, making math practice fun and interactive.</p>
@@ -197,7 +207,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/facefilter.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>AR FACE FILTER</h4>
                         <p>AR Face Filter is an interactive AR Foundation project in Unity that applies real-time face filters for festive experiences. It includes three UI buttons for different filters: Christmas (mask, video, and song), Diwali, and Halloween, providing an engaging and immersive augmented reality experience. 🎭✨🚀</p>
                         <a href="https://drive.google.com/file/d/1FPrRgpMzRJHaLH9UCQOM5RNTHBd_XNx8/view?usp=sharing"><i class='bx bx-link-external' ></i></a>
@@ -205,7 +215,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/META.jpeg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>DIWALI EFFECT</h4>
                         <p>An interactive Diwali AR filter using Meta Spark Studio for Instagram. It features glowing diyas, sparkling lights, and festive animations like bursting crackers and rangoli designs. Users can personalize with bokeh effects and cultural elements like bindis.
                              The filter brings Diwali's vibrant spirit to life on mobile devices.</p>
@@ -214,7 +224,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/LENS.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>CULTURE</h4>
                         <p>Developed a Snapchat Lens using Lens Studio to celebrate diverse cultures.
                              The filter showcases unique cultural elements, traditional patterns, and animations, offering an interactive and immersive experience. It highlights the beauty of cultural diversity, allowing users to engage with and share the essence of various traditions through augmented reality.</p>
@@ -223,7 +233,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/dam.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="DESIGN">
                         <h4>DAM</h4>
                         <p>A 3D dam model designed in Blender features a detailed concrete structure, spillways, and water simulation using Mantaflow. 
                             It includes realistic textures, lighting, and fluid dynamics, making it ideal for visualization, AR/VR applications, and simulations. 🚀🌊</p>
@@ -231,7 +241,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/contact.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="FULL STACK">
                         <h4>CONTACT MANAGER</h4>
                         <p>The Contact Manager Project is a MERN application built using React (Vite) for the frontend, Node.js and Express.js for the backend, and MongoDB for database management.It features CRUD functionality and search contact effortlessly. </p>
                         <a href="https://github.com/Dhanushree1401/Contact_manager"><i class='bx bx-link-external' ></i></a>
@@ -239,7 +249,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/banking.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="FULL STACK">
                         <h4>BANKING ENTERPRISE</h4>
                         <p>Developed using Python (Flask), HTML and MySQL ensuring secure and seamless financial transactions. Key features include account creation, balance inquiry, fund transfers, transaction history, profile management, loan and insurance processing, and user authentication.</p>
                         <a href="https://github.com/Dhanushree1401/Banking_project_with-db"><i class='bx bx-link-external' ></i></a>
@@ -247,7 +257,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/chat.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="FULL STACK">
                         <h4>CHAT APPLICATION</h4>
                         <p>Developed a real-time Chat Application using React and Firebase, supporting text messaging, voice messages, and emoji reactions with seamless real-time synchronization and secure authentication. 
                             Built with Firebase Firestore and Firebase Authentication, ensuring a responsive and engaging user experience.</p>
@@ -256,7 +266,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/birdshop.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="FRONTEND">
                         <h4>BIRD SHOP</h4>
                         <p>The Bird Shop is a fully responsive e-commerce web app built with HTML, CSS, and JavaScript, 
                             featuring real-time quantity management, dynamic price updates, and an intuitive UI for seamless shopping. Optimized with media queries, it ensures smooth performance across all devices, showcasing expertise in frontend development. 🚀🛍️</p>
@@ -265,7 +275,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/traslator.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="PYTHON">
                         <h4>REALTIME LANGUAGE TRANSLATOR</h4>
                         <p>Developed a Translator using Python (Flask), Tkinter, and Google Translate API, enabling seamless voice and text translation across multiple languages. 
                             Features include speech-to-text conversion, real-time translation, text-to-speech output, and idiom handling</p>
@@ -274,7 +284,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/chatbot.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="PYTHON">
                         <h4>CHATBOT</h4>
                         <p>Developed an AI-powered Chatbot using Google Gemini, LangChain, and Gradio, featuring real-time conversations, chat history management, and a user-friendly interface. Deployed on Hugging Face</p>
                         <a href="https://dhanu1401-chatbot.hf.space"><i class='bx bx-link-external' ></i></a>
@@ -282,7 +292,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/draincover.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="IOT">
                         <h4>DRAIN COVER CLEANER</h4>
                         <p>The Drain Cover Cleaner is an automated system with IR and water sensors, a vacuum, and heating elements to efficiently remove debris and prevent clogging in drainage systems. 
                             It won 2nd place in both a department Ideathon and a paper presentation at PSG College of Technology. 🚀</p>
@@ -291,7 +301,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/petco.jpg"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="UI/UX">
                         <h4>PETCO</h4>
                         <p>A user-friendly app prototype using Figma for pet owners, featuring functionalities such as purchasing pet accessories, selecting and booking veterinary appointments, finding nearby pet stores, adding pet details, and tracking pets using IoT devices. 
                             The app emphasizes intuitive navigation and a seamless user experience, catering to the needs of pet enthusiasts.</p>
@@ -301,7 +311,7 @@
                 </div>
                 <div class="portfolio-box">
                     <img src="Images/sleeify.png"alt="">
-                    <div class="portfolio-layer">
+                    <div class="portfolio-layer" data-category="UI/UX">
                         <h4>SLEEPIFY</h4>
                         <p>A user-friendly app prototype using Figma for sleep monitoring, featuring functionalities such as tracking sleep patterns, setting personalized sleep goals, accessing sleep improvement tips, and booking consultations with sleep specialists.
                              The app focuses on intuitive design and seamless navigation to enhance user experience and promote healthier sleep habits.</p>
