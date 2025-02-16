@@ -423,51 +423,6 @@
 }
 
 
-.image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.content {
-    margin-top: 15px;
-    color: var(--text-color);
-}
-
-.content h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.content p {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .box {
-        flex: 0 0 calc(50% - 20px); /* 2 items per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .box {
-        flex: 0 0 calc(100% - 20px); /* 1 item per row */
-    }
-
-    .heading {
-        font-size: 2rem;
-    }
-}
 
 .footer-text p{
    font-size: 1.6rem;
@@ -492,11 +447,7 @@
    color: var(--second-bg-color);
 }
 
-@media (max-width:1200px){
-   html{
-      font-size: 55%;
-   }
-}
+
 
 @media(max-width:991px){
    .header{
@@ -648,11 +599,6 @@
    padding: 50px 10%;
    background: var(--bg-color);
    color: #fff;
-}
-
-.heading {
-   font-size: 2.5rem;
-   margin-bottom: 30px;
 }
 
 .edu-container {
@@ -843,7 +789,7 @@
 /* Media Queries */
 @media (max-width: 768px) {
    .buttons {
-      flex-direction: row; /* Stack buttons vertically */
+      flex-direction: column; /* Stack buttons vertically */
    }
    .buttons button {
       width: 40%; /* Makes buttons more touch-friendly */
