@@ -755,7 +755,7 @@
 }
 @media screen and (max-width: 480px) {
     .buttons {
-        flex-direction: column; /* Stack buttons vertically */
+        flex-direction: row; /* Stack buttons vertically */
     }
     .buttons button {
         width: 80%; /* Make buttons wider */
