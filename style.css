@@ -171,10 +171,10 @@
 
  @keyframes zoomIn {
    0% {
-       transform: scale(0.1); /* Normal size */
+       transform: scale(0.6); /* Normal size */
    }
    100% {
-       transform: scale(0.5); /* Slightly larger */
+       transform: scale(0.9); /* Slightly larger */
    }
 }
 .home-img {
@@ -251,7 +251,7 @@
  }
 
  .about-content h2{
-    text-align: left;
+    text-align: justify;
     line-height: 1.2;
  }
 
@@ -370,16 +370,15 @@
     .home-img {
         top: 100px;
         left: 60px;
-        width: 40%; /* Adjust the image size */
+        width: 40%; 
     }
 }
 
-/* For mobile devices (480px - 767px) */
 @media (max-width: 767px) {
     .home-img {
         top: 80px;
         left: 40px;
-        width: 40%; /* Reduce size for smaller screens */
+        width: 40%; 
     }
 }
 
