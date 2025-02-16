@@ -385,8 +385,8 @@
 
 @media (max-width: 480px) {
     .home-img {
-        top: 0;
-        left: 0;
+        top: 40px;
+        left: 40px;
         width: 40%; /* Make it responsive */
         text-align: center;
     }
