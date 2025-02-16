@@ -9,7 +9,17 @@ menuIcon.onclick=()=>{
 
 let sections=document.querySelectorAll('section');
 let navLinks=document.querySelectorAll('header nav a');
+function filterProjects(category) {
+    let projects = document.querySelectorAll(".portfolio-layer");
 
+    projects.forEach(project => {
+        if (category === "ALL" || project.getAttribute("data-category") === category) {
+            project.style.display = "block";  // Show matching projects
+        } else {
+            project.style.display = "none";  // Hide others
+        }
+    });
+}
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
