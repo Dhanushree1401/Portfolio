@@ -10,7 +10,7 @@ menuIcon.onclick=()=>{
 let sections=document.querySelectorAll('section');
 let navLinks=document.querySelectorAll('header nav a');
 function filterProjects(category) {
-    let projects = document.querySelectorAll(".portfolio-layer");
+    let projects = document.querySelectorAll(".portfolio-box");
 
     projects.forEach(project => {
         if (category === "ALL" || project.getAttribute("data-category") === category) {
