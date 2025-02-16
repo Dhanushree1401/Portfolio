@@ -171,10 +171,10 @@
 
  @keyframes zoomIn {
    0% {
-       transform: scale(0.6); /* Normal size */
+       transform: scale(1); /* Normal size */
    }
-   100% {
-       transform: scale(0.9); /* Slightly larger */
+   50% {
+       transform: scale(1.1); /* Slightly larger */
    }
 }
 .home-img {
@@ -262,6 +262,7 @@
  .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+     text-align:justify;
  }
  .services h2{
    margin-bottom: 5rem;
