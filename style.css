@@ -769,7 +769,9 @@
    display: flex;
    justify-content: center;  
    align-items: center;  
+   flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
 }
+
 .buttons button {
    padding: 10px 20px;
    margin: 5px;
@@ -778,10 +780,36 @@
    color: var(--bg-color);
    cursor: pointer;
    border-radius: 5px;
+   font-size: 1rem;
+   transition: background-color 0.3s, transform 0.2s;
 }
+
+/* Hover effect */
 .buttons button:hover {
-   background-color:var(--text-color);
+   background-color: var(--text-color);
+   transform: scale(1.05);
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+   .buttons {
+      flex-direction: row; /* Stack buttons vertically */
+   }
+   .buttons button {
+      width: 40%; /* Makes buttons more touch-friendly */
+      font-size: 1.1rem; /* Slightly larger font for readability */
+      padding: 12px;
+   }
+}
+
+@media (max-width: 480px) {
+   .buttons button {
+      width: 40%; /* Full width on small screens */
+      font-size: 1.2rem; /* Even larger for better usability */
+      padding: 14px;
+   }
+}
+
 
 #msg{
    color: #61b752;
