@@ -758,7 +758,7 @@
         flex-direction: row; /* Stack buttons vertically */
     }
     .buttons button {
-        width: 80%; /* Make buttons wider */
+        width: 40%; /* Make buttons wider */
         padding: 12px;
         font-size: 14px;
     }
