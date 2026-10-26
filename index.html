@@ -85,6 +85,31 @@ section>h2{font-size:30px;font-weight:800;position:sticky;top:calc(16px + env(sa
 .contact .btn.p{background:var(--hot);border-color:var(--hot);color:var(--hot-ink)}
 .contact .btn:hover{background:var(--bg);color:var(--ink);border-color:var(--bg)}
 footer{padding:36px 0 48px;color:var(--mute);font-size:14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{font:600 14px "Instrument Sans",system-ui,sans-serif;padding:11px 16px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--mute);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+@media (max-width:640px){
+body{font-size:16px}
+nav{flex-direction:column;align-items:flex-start;gap:8px;padding:16px 0 4px}
+nav .links{gap:6px 16px}
+.hero{padding-top:28px}
+.cta .btn{flex:1 1 100%;text-align:center}
+.pipe{margin-top:36px;border-radius:16px}
+.nodes{grid-template-columns:1fr}
+.node{text-align:left;padding:6px 0 6px 34px}
+.node::before{left:0;top:9px;margin-left:0}
+.node::after{left:7px;top:26px;width:2px;height:100%}
+.stats{grid-template-columns:1fr 1fr}
+.stat,.stat+.stat{padding:16px 10px 16px 0;border-left:0;border-top:0}
+.stat:nth-child(even){padding-left:14px;border-left:1px solid var(--line)}
+.stat:nth-child(n+3){border-top:1px solid var(--line)}
+.stat b{font-size:36px}
+.stat span{font-size:14px}
+section{padding-top:52px}
+.role{margin-bottom:20px}
+.contact{margin-top:64px;border-radius:20px}
+.contact .btn{display:block;text-align:center;margin-right:0}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.node,.node::before{transition:none}}
 </style>
 </head>
@@ -99,9 +124,9 @@ footer{padding:36px 0 48px;color:var(--mute);font-size:14px}
 <div class="cta"><a class="btn p" href="mailto:dhanushreeramessh@gmail.com">Email me</a><a class="btn" href="#work">See the work</a></div>
 
 <div class="pipe" aria-label="Animated example of a ticket moving through an automated workflow">
-<small>One ticket, five hops, zero manual steps. A workflow I built at Rubrik.</small>
+<div class="tabs" role="group" aria-label="Choose a workflow"><button class="tab" type="button">Loop Engineering on Azure</button><button class="tab" type="button">Slack–Jira responder</button></div><small id="cap"></small>
 <div class="nodes" id="nodes">
-<div class="node">Jira ticket</div><div class="node">Webhook</div><div class="node">Python on Azure</div><div class="node">Jira Comment</div><div class="node">Ticket closed</div>
+
 </div>
 <p class="log" id="log" aria-live="off"></p>
 </div>
@@ -109,7 +134,7 @@ footer{padding:36px 0 48px;color:var(--mute);font-size:14px}
 <div class="stats">
 <div class="stat"><b>11</b><span>filter fields added to the Workday Employee API</span></div>
 <div class="stat"><b>22.3%</b><span>knowledge gain from my AR app, tested on 50 learners</span></div>
-<div class="stat"><b>7</b><span>competition wins, incl. a BharatXR finalist spot</span></div>
+<div class="stat"><b>4</b><span>Slack–Jira responders built on Glean AI</span></div>
 <div class="stat"><b>2</b><span>research papers: IEEE ICCCA published, ICASET accepted</span></div>
 </div>
 </header>
@@ -118,11 +143,13 @@ footer{padding:36px 0 48px;color:var(--mute);font-size:14px}
 <h2>Work</h2>
 <div>
 <div class="role"><strong>Enterprise Integration Engineer Intern</strong><span>Rubrik · Bangalore · Aug 2025 to now</span></div>
-<div class="item"><h3>Jira ticket in, project out</h3><p>A Python automation that <strong>starts project intake and dev workflows the moment a ticket is created</strong>. Deployed on Microsoft Azure.</p></div>
-<div class="item"><h3>Workday Employee API, extended</h3><p>Added <strong>11 filtering fields</strong> to the schema and wrote the backend extraction logic. Re-scaffolded the services and stood up new, unique API instances.</p></div>
-<div class="item"><h3>Slack and Jira, in sync both ways</h3><p>AI-powered workflows that create, route, sync and close tickets. <strong>Real-time webhooks</strong> keep Slack threads and Jira in step, with status tracking and audit logs.</p></div>
-<div class="item"><h3>Claude skills and an MCP server</h3><p>Reusable Claude skills that <strong>generate MuleSoft Workday API projects</strong>. A Model Context Protocol server for DocuSign.</p></div>
-<div class="item"><h3>The path to production</h3><p>Git-based CI/CD promotion from Dev to QA to release. Code reviews, unit tests, deployments. Also run DocuSign and Zapier admin.</p></div>
+<div class="item"><h3>Loop Engineering, on Azure</h3><p>A Python automation that takes a Jira ticket from intake to build. It <strong>keeps commenting on the same ticket</strong> until it has every detail it needs, then builds. Three tracks: <strong>New</strong>, <strong>Existing</strong> (reads the GitHub repo and delivers a .zip) and <strong>KTLO</strong>. Runs on Microsoft Azure.</p></div>
+<div class="item"><h3>Workday Employee API, extended</h3><p>Added <strong>11 filtering fields</strong> in RAML and rewrote the filtering logic. Re-scaffolded in Anypoint Studio, set up the new API instance, and promoted Dev to QA by pull request. Gave audit teams the manager and team data they needed for <strong>SOX compliance scripts</strong>.</p></div>
+<div class="item"><h3>Glean responders for support teams</h3><p>Slack bots that answer from the company knowledge base, then <strong>create, route, sync and close Jira tickets</strong>. Priority (P1 to P5), assignee and category come straight from the AI’s reply. Comments and status changes sync both ways through Jira webhooks.</p><p style="margin-top:10px"><strong>Shipped:</strong> Glean and CPQ responders. <strong>Ready to deploy:</strong> Facilities. <strong>In testing:</strong> Okta, with a dynamic IAM Desk form.</p></div>
+<div class="item"><h3>Claude skills and an MCP server</h3><p>A reusable Claude skill that <strong>generates MuleSoft Workday API projects</strong> to company standards. A Slack–Jira skill is in progress. Also built a Model Context Protocol server for DocuSign.</p></div>
+<div class="item"><h3>Data pipelines and reliability</h3><p>Added <strong>AR_RULES and ZI_LOCATION_ID</strong> to the CM-to-Snowflake ETL jobs. Cut the Message Queue out of the Workday-to-Salesforce failure alert and moved DB and email settings out of the code.</p></div>
+<div class="item"><h3>The path to production</h3><p>Git-based promotion from Dev to QA to release, with code reviews, MUnit and unit tests. Documented designs and fixes in Confluence. <strong>Recognized on Cube</strong> for the Slack API discovery initiative.</p></div>
+<div class="item"><h3>Admin, with a compliance eye</h3><p>Glean, DocuSign and Zapier access and permissions. Reviewed Zap requests for unauthorized AI connectors and task limits, and fixed broken Zaps.</p></div>
 </div>
 </section>
 
@@ -180,12 +207,15 @@ footer{padding:36px 0 48px;color:var(--mute);font-size:14px}
 
 <script>
 (function(){
-var nodes=[].slice.call(document.querySelectorAll('#nodes .node')),log=document.getElementById('log');
-var msgs=['<b>DHAN-101</b> created in Jira: “Request new integration project.”','<b>Webhook</b> fires within seconds and carries the ticket payload.','<b>Python on Azure</b> starts project intake and scaffolds the dev workflow.','<b>Slack</b> thread opens. Replies sync back to the ticket and the audit log.','<b>Closed.</b> Status, owner and history are recorded on both sides.'];
-function show(i){nodes.forEach(function(n,k){n.className='node'+(k<i?' done':'')+(k===i?' on':'')});log.innerHTML=msgs[i]}
-var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-if(reduce){nodes.forEach(function(n){n.className='node done'});log.innerHTML=msgs[4];return}
-var i=0;show(0);setInterval(function(){i=(i+1)%6;if(i===5){nodes.forEach(function(n){n.className='node done'});log.innerHTML=msgs[4];return}show(i)},1700);
+var F=[{s:'Loop Engineering on Azure: a ticket that keeps asking until it has what it needs to build.',n:['Ticket created','Intake','Comment loop','Pick a track','Built'],m:['<b>Jira ticket created.</b> The Azure automation picks it up.','<b>Intake</b> reads the ticket and checks for every detail needed to build.','<b>Loop:</b> if anything is missing, it comments on the same ticket and waits for answers, until the picture is complete.','<b>Track:</b> New, Existing or KTLO. Existing reads the GitHub repo.','<b>Built.</b> Existing requests come back as a .zip made from the repo.']},{s:'Slack\u2013Jira responder: one question, five hops, no manual triage.',n:['Slack question','Glean answer','Jira ticket','Two-way sync','Closed'],m:['<b>Slack:</b> an employee asks in the IT support channel.','<b>Glean AI</b> answers from the company knowledge base first.','<b>Jira</b> ticket opens on request, with priority, assignee and category taken from the answer.','<b>Webhooks</b> keep Slack replies and Jira status in sync, both ways.','<b>Closed.</b> The closing comment posts to the thread and the audit trail stays complete.']}];
+var box=document.getElementById('nodes'),log=document.getElementById('log'),cap=document.getElementById('cap'),tabs=[].slice.call(document.querySelectorAll('.tab'));
+var cur=0,i=0,timer,nodes=[],reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function render(){var f=F[cur];cap.textContent=f.s;box.innerHTML=f.n.map(function(x){return '<div class="node">'+x+'</div>'}).join('');nodes=[].slice.call(box.children);tabs.forEach(function(t,k){t.setAttribute('aria-pressed',k===cur?'true':'false')})}
+function show(j){nodes.forEach(function(n,k){n.className='node'+(k<j?' done':'')+(k===j?' on':'')});log.innerHTML=F[cur].m[j]}
+function all(){nodes.forEach(function(n){n.className='node done'});log.innerHTML=F[cur].m[4]}
+function start(){clearInterval(timer);i=0;render();if(reduce){all();return}show(0);timer=setInterval(function(){i=(i+1)%6;if(i===5)all();else show(i)},2200)}
+tabs.forEach(function(t,k){t.onclick=function(){cur=k;start()}});
+start();
 })();
 </script>
 </body>
